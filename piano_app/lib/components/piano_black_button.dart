@@ -1,8 +1,11 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class PianoBlackButton extends StatelessWidget {
-  const PianoBlackButton({Key? key, this.visible = true}) : super(key: key);
+  const PianoBlackButton(this.nota, {Key? key, this.visible = true})
+      : super(key: key);
   final bool visible;
+  final String nota;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +14,7 @@ class PianoBlackButton extends StatelessWidget {
       child: SizedBox(
         width: 63,
         height: 150,
+        // Visibility: child widget korunsun? korunbosun?
         child: Visibility(
           visible: visible,
           child: ElevatedButton(
@@ -26,7 +30,12 @@ class PianoBlackButton extends StatelessWidget {
                 },
               ),
             ),
-            onPressed: () {},
+            onPressed: () async {
+              await AudioPlayer().play(AssetSource('$nota.wav'));
+            },
+            onLongPress: () async {
+              await AudioPlayer().play(AssetSource('$nota.wav'));
+            },
             child: const Align(
               alignment: Alignment.bottomCenter,
               child: Padding(

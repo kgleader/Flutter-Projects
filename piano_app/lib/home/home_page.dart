@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:piano_app/components/piano_black_button.dart';
-import 'package:piano_app/components/piano_button.dart';
+import 'package:piano_play/components/piano_black_button.dart';
+import 'package:piano_play/components/piano_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Drawer(): jan taraptan achylchu menu
       drawer: const Drawer(),
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -31,22 +32,25 @@ class _HomePageState extends State<HomePage> {
             flex: 3,
             child: ListView.builder(
               itemCount: 2,
+              // scrollDirection: Axis.horizontal: ListView.builder gorizontalnyi kurat
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
+                // Stack widgettterdi ustu ustuno kurat
                 return Stack(
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       children: const [
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
-                        PianoWhiteButton(),
+                        PianoWhiteButton('do'),
+                        PianoWhiteButton('re'),
+                        PianoWhiteButton('mi'),
+                        PianoWhiteButton('fa'),
+                        PianoWhiteButton('lya'),
+                        PianoWhiteButton('si'),
+                        PianoWhiteButton('do2'),
                       ],
                     ),
+                    // Positioned: child widgetinin posissiasyn berebiz
                     Positioned(
                       left: 40.0,
                       right: 0.0,
@@ -54,12 +58,12 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: const [
-                          PianoBlackButton(),
-                          PianoBlackButton(),
-                          PianoBlackButton(),
-                          PianoBlackButton(visible: false),
-                          PianoBlackButton(),
-                          PianoBlackButton(),
+                          PianoBlackButton('do'),
+                          PianoBlackButton('re'),
+                          PianoBlackButton('mi'),
+                          PianoBlackButton('fa', visible: false),
+                          PianoBlackButton('lya'),
+                          PianoBlackButton('si'),
                         ],
                       ),
                     )
