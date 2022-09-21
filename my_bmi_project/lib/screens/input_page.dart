@@ -1,8 +1,7 @@
 import 'package:BMI_calculator/calculator_brain.dart';
 import 'package:BMI_calculator/components/round_button_icon.dart';
 import 'package:BMI_calculator/screens/results_page.dart';
-// ignore: unnecessary_import
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
