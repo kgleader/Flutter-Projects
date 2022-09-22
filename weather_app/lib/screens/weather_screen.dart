@@ -167,7 +167,7 @@ class _WeatherScreenState extends State<WeatherScreen>
               TextButton(
                 child: Text('ok'),
                 style: TextButton.styleFrom(
-                  primary: appTheme.accentColor,
+                  primary: appTheme.colorScheme.secondary,
                   elevation: 1,
                 ),
                 onPressed: () {
@@ -266,7 +266,7 @@ class _WeatherScreenState extends State<WeatherScreen>
               TextButton(
                 child: Text('Enable!'),
                 style: TextButton.styleFrom(
-                  primary: appTheme.accentColor,
+                  primary: appTheme.colorScheme.secondary,
                   elevation: 1,
                 ),
                 onPressed: () {

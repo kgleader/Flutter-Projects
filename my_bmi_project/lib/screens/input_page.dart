@@ -1,6 +1,8 @@
 import 'package:BMI_calculator/calculator_brain.dart';
 import 'package:BMI_calculator/components/round_button_icon.dart';
 import 'package:BMI_calculator/screens/results_page.dart';
+import 'package:BMI_calculator/utils/app_colors.dart';
+import 'package:BMI_calculator/utils/app_text.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,13 +22,13 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
-  int weight = 30;
+  int weight = 50;
   int age = 18;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text(AppText.NameApp),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -76,7 +78,7 @@ class _InputPageState extends State<InputPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'HEIGHT',
+                    AppText.Height,
                     style: kLabelStyle,
                   ),
                   Row(
@@ -89,21 +91,21 @@ class _InputPageState extends State<InputPage> {
                         style: kNumberTextStyle,
                       ),
                       Text(
-                        'cm',
+                        AppText.Length,
                         style: kLabelStyle,
                       )
                     ],
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      activeTrackColor: Colors.white,
-                      inactiveTrackColor: Color(0xFF8D8E98),
-                      thumbColor: Color(0xFFEB1555),
-                      overlayColor: Color(0x29EB1555),
+                      activeTrackColor: AppColors.activColor,
+                      inactiveTrackColor: AppColors.inactiveColor,
+                      thumbColor: AppColors.thumbColor,
+                      overlayColor: Color.fromARGB(41, 158, 182, 24),
                       thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          RoundSliderThumbShape(enabledThumbRadius: 10.0),
                       overlayShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 20.0),
+                          RoundSliderThumbShape(enabledThumbRadius: 10.0),
                     ),
                     child: Slider(
                       value: height.toDouble(),
@@ -130,7 +132,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'WEIGHT',
+                          AppText.Weight,
                           style: kLabelStyle,
                         ),
                         Text(
@@ -172,7 +174,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'AGE',
+                          AppText.Age,
                           style: kLabelStyle,
                         ),
                         Text(
@@ -211,7 +213,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           BottomButton(
-            buttonText: 'CALCULATE',
+            buttonText: AppText.Calculate,
             onTap: () {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);

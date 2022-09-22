@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          const Expanded(child: Text('cal')),
+          const Expanded(child: Text('call')),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -27,19 +27,19 @@ class _HomePageState extends State<HomePage> {
                     NumberButton(
                       nomer: 1,
                       bizBergenFunksiya: (maani) {
-                        print('bizBergenFunksiya $maani');
+                        print('birFunctia $maani');
                       },
                     ),
                     NumberButton(
                       nomer: 2,
                       bizBergenFunksiya: (value) {
-                        print('bizBergenFunksiya $value');
+                        print('birFunctia $value');
                       },
                     ),
                     NumberButton(
                       nomer: 3,
                       bizBergenFunksiya: (san) {
-                        print('bizBergenFunksiya $san');
+                        print('birFunctia $san');
                       },
                     ),
                   ],
@@ -50,19 +50,19 @@ class _HomePageState extends State<HomePage> {
                     NumberButton(
                       nomer: 4,
                       bizBergenFunksiya: (integer) {
-                        print('bizBergenFunksiya $integer');
+                        print('birFunctia $integer');
                       },
                     ),
                     NumberButton(
                       nomer: 5,
                       bizBergenFunksiya: (nomer) {
-                        print('bizBergenFunksiya $nomer');
+                        print('birFunctia $nomer');
                       },
                     ),
                     NumberButton(
                       nomer: 6,
                       bizBergenFunksiya: (s) {
-                        print('bizBergenFunksiya $s');
+                        print('birFunctia $s');
                       },
                     ),
                   ],
@@ -73,19 +73,19 @@ class _HomePageState extends State<HomePage> {
                     NumberButton(
                       nomer: 7,
                       bizBergenFunksiya: (v) {
-                        print('bizBergenFunksiya $v');
+                        print('birFunctia $v');
                       },
                     ),
                     NumberButton(
                       nomer: 8,
                       bizBergenFunksiya: (c) {
-                        print('bizBergenFunksiya $c');
+                        print('birFunctia $c');
                       },
                     ),
                     NumberButton(
                       nomer: 9,
                       bizBergenFunksiya: (w) {
-                        print('bizBergenFunksiya $w');
+                        print('birFunctia $w');
                       },
                     ),
                   ],

@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 import 'Question.dart';
 
 class QuizBrain {
   int _questionNumber = 0;
 
-  List<Question> _questionBank = [
+  final List<Question> _questionBank = [
     Question('Кыргызстан Борбор Азияда жайгашканбы?', true),
     Question('Аарылар балыктар менен тамактанат.', false),
     Question(
@@ -19,6 +21,35 @@ class QuizBrain {
         true),
     Question('Google башында \"Backrub\" деп аталган.', true),
   ];
+
+  get questionList => null;
+
+  get count => null;
+
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xFF333333),
+        body: _body(),
+      ),
+    );
+  }
+
+  _body() {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Center(
+              child: Padding(
+            padding: const EdgeInsets.only(top: 110, left: 20, right: 20),
+            child: Text(
+              questionList[count].question,
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
+          )),
+        ]);
+  }
 
   void nextQuestion() {
     if (_questionNumber < _questionBank.length - 1) {

@@ -5,7 +5,9 @@ class Themes {
   static const LIGHT_THEME_CODE = 1;
 
   static final _dark = ThemeData(
-      primarySwatch: MaterialColor(
+      disabledColor: Colors.green,
+      colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: MaterialColor(
         Colors.black.value,
         const <int, Color>{
           50: Colors.black12,
@@ -19,12 +21,12 @@ class Themes {
           800: Colors.black87,
           900: Colors.black87,
         },
-      ),
-      accentColor: Colors.white,
-      disabledColor: Colors.green);
+      )).copyWith(secondary: Colors.white));
 
   static final _light = ThemeData(
-      primarySwatch: MaterialColor(
+      disabledColor: Colors.green,
+      colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: MaterialColor(
         Colors.white.value,
         const <int, Color>{
           50: Colors.white10,
@@ -38,9 +40,7 @@ class Themes {
           800: Colors.white70,
           900: Colors.white70,
         },
-      ),
-      accentColor: Colors.black,
-      disabledColor: Colors.green);
+      )).copyWith(secondary: Colors.black));
 
   static ThemeData getTheme(int code) {
     if (code == LIGHT_THEME_CODE) {

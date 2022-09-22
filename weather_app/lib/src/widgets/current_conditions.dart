@@ -24,7 +24,7 @@ class CurrentConditions extends StatelessWidget {
       children: <Widget>[
         Icon(
           weather.getIconData(),
-          color: appTheme.accentColor,
+          color: appTheme.colorScheme.secondary,
           size: 70,
         ),
         SizedBox(
@@ -35,7 +35,7 @@ class CurrentConditions extends StatelessWidget {
           style: TextStyle(
               fontSize: 100,
               fontWeight: FontWeight.w100,
-              color: appTheme.accentColor),
+              color: appTheme.colorScheme.secondary),
         ),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           ValueTile("max", '$maxTemp'),
@@ -45,7 +45,7 @@ class CurrentConditions extends StatelessWidget {
                 child: Container(
               width: 1,
               height: 30,
-              color: appTheme.accentColor.withAlpha(50),
+              color: appTheme.colorScheme.secondary.withAlpha(50),
             )),
           ),
           ValueTile("min", '$minTemp°'),
