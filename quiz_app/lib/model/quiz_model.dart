@@ -5,12 +5,12 @@ class Quiz {
   final bool answer;
 }
 
-const q1 = Quiz('Кыргызсьанда 7 область барбы?', true);
-const q2 = Quiz('Кыргызстандын борбору Бишкеби?', true);
+const q1 = Quiz('Кыргызстанда 7 область барбы?', true);
+const q2 = Quiz('Кыргызстандын борбору Бишкекби?', true);
 const q3 = Quiz('Эң кичине материк бул - Түндүк Америкабы?', false);
-const q4 = Quiz('Ош шаарына 3000 жыл болгонбу?', true);
+const q4 = Quiz('Ошко 3000 жыл болгонбу?', true);
 const q5 = Quiz('Крокадил бакка чыга алабы?', false);
-const q6 = Quiz('Жер планетасы планеталардын эң чоңубу?', false);
+const q6 = Quiz('Жер планетасы эң чоңбу?', false);
 const q7 = Quiz('Flutter мобильдик тиркеме жасай алабы?', true);
 const q8 = Quiz('Бал бузулабы?', false);
 

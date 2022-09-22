@@ -6,7 +6,16 @@ class QuizButton extends StatelessWidget {
     Key? key,
     required this.baskanda,
   }) : super(key: key);
+
   final bool tuuraButtonbu;
+
+  // 13:
+  // final --> Мен бир гана жолу маани берем да кийин аны озгортбойт
+  // void --> returnType (ech nerse kartarbait)
+  // Function --> Фунция
+  // () --> функция экенин билдирет (чакырылды)
+  // bool --> функцияны берип жатканда колдонуучу жардамчы параметр
+  // baskanda --> аталышы
   final void Function(bool) baskanda;
 
   @override
@@ -15,6 +24,7 @@ class QuizButton extends StatelessWidget {
       width: double.infinity,
       height: 40,
       child: ElevatedButton(
+        // onPressed --> property (параметр же касиет)
         onPressed: () => baskanda(tuuraButtonbu),
         style: ElevatedButton.styleFrom(
           primary:

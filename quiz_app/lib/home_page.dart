@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/model/quiz_model.dart';
-import 'package:quiz_app/widget/quiz_button.dart';
-import 'package:quiz_app/widget/result_icon.dart';
+import 'model/quiz_model.dart';
+import 'widget/quiz_button.dart';
+import 'widget/result_icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,9 +11,40 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int intex = 4;
+  int index = 0;
+  List jooptor = <bool>[];
+  List tuuraJooptor = <bool>[];
+  List kataJooptor = <bool>[];
 
-  void teksher() {}
+  void teksher(bool value) {
+    if (quizzes[index].answer == value) {
+      jooptor.add(true);
+      tuuraJooptor.add(true);
+    } else {
+      jooptor.add(false);
+      kataJooptor.add(false);
+    }
+    setState(() {
+      if (quizzes[index] == quizzes.last) {
+        index = 0;
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: const Text('Siz Bul testten'),
+              content: Text(
+                  'tuura joop ${tuuraJooptor.length}/kata joop ${kataJooptor.length}'),
+            );
+          },
+        );
+        jooptor.clear();
+        // tuuraJooptor.clear();
+        // kataJooptor.clear();
+      } else {
+        index++;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +58,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Spacer(),
             Text(
-              quizzes[intex].question,
+              quizzes[index].question,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
@@ -38,22 +69,28 @@ class _HomePageState extends State<HomePage> {
             QuizButton(
               tuuraButtonbu: true,
               baskanda: (maani) {
-                print(maani);
+                teksher(maani);
               },
             ),
             const SizedBox(height: 20),
             QuizButton(
               tuuraButtonbu: false,
               baskanda: (maani) {
-                print(maani);
+                teksher(maani);
               },
             ),
             const SizedBox(height: 50),
-            Row(
-              children: const [
-                ResultIcon(true),
-                ResultIcon(false),
-              ],
+            SizedBox(
+              height: 40,
+              child: ListView.builder(
+                itemCount: jooptor.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int i) {
+                  return jooptor[i]
+                      ? const ResultIcon(true)
+                      : const ResultIcon(false);
+                },
+              ),
             ),
             const SizedBox(height: 50)
           ],
