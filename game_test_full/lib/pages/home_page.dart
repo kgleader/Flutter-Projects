@@ -52,26 +52,30 @@ class MyHomePage extends StatelessWidget {
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                return Expanded(
-                  child: InkWell(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ContinentCard(
-                          cont: continents[index],
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute<void>(
-                                builder: (BuildContext context) =>
-                                    const TestPage(
-                                  suroo: [],
-                                ),
-                              ),
-                            );
-                          }),
+                return Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ContinentCard(
+                              cont: continents[index],
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute<void>(
+                                    builder: (BuildContext context) =>
+                                        const TestPage(
+                                      suroo: [],
+                                    ),
+                                  ),
+                                );
+                              }),
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 );
               },
             ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../constants/app_text.dart';
-import 'suroo.dart';
+import 'package:game_test_full/constants/app_text.dart';
+import 'package:game_test_full/models/suroo.dart';
 
 class Continent {
   const Continent({
@@ -21,7 +20,7 @@ final asia = Continent(
   name: AppText.asia,
   icon: 'asia',
   color: const Color(0xffFE8180),
-  suroo: asiaQuestions,
+  suroo: asiaQuessions,
 );
 
 const europe = Continent(
@@ -30,11 +29,10 @@ const europe = Continent(
   color: Color(0xff81A2FD),
 );
 
-const northAmerica = Continent(
+const nAmerica = Continent(
   name: AppText.northAmerica,
   icon: 'north_america',
   color: Color(0xffFEB000),
-  suroo: northAmericaSuroo,
 );
 
 const sAmerica = Continent(
@@ -43,10 +41,11 @@ const sAmerica = Continent(
   color: Color(0xffE5A9E4),
 );
 
-const africa = Continent(
+final africa = Continent(
   name: AppText.africa,
   icon: 'africa',
-  color: Color(0xffFEEF34),
+  color: const Color(0xffFEEF34),
+  suroo: africaQuessions,
 );
 
 const australia = Continent(
@@ -58,7 +57,7 @@ const australia = Continent(
 List<Continent> continents = [
   europe,
   asia,
-  northAmerica,
+  nAmerica,
   sAmerica,
   africa,
   australia,
