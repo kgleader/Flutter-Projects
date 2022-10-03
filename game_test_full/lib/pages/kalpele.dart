@@ -53,10 +53,14 @@ class CustomSlider extends StatelessWidget {
           lenght,
           (index) {
             final color = colors.length > index ? colors[index] : Colors.grey;
-            return Expanded(
-              child: Container(
-                color: color,
-              ),
+            return Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: color,
+                  ),
+                ),
+              ],
             );
           },
         ),

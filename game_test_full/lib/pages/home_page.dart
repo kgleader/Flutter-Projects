@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
+import 'package:game_test_full/components/continent_card.dart';
+import 'package:game_test_full/constants/app_color.dart';
+import 'package:game_test_full/constants/app_text.dart';
+import 'package:game_test_full/models/continent.dart';
 import 'package:game_test_full/pages/test_page.dart';
-import '../components/continent_card.dart';
-import '../constants/app_color.dart';
-import '../constants/app_text.dart';
-import '../models/continent.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -41,41 +42,37 @@ class MyHomePage extends StatelessWidget {
           const Divider(
             height: 2,
             color: Colors.black,
-            indent: 20,
-            endIndent: 20,
+            indent: 30,
+            endIndent: 30,
           ),
           Expanded(
             child: GridView.builder(
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(14),
               itemCount: continents.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                return Row(
-                  children: [
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: ContinentCard(
-                              cont: continents[index],
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute<void>(
-                                    builder: (BuildContext context) =>
-                                        const TestPage(
-                                      suroo: [],
-                                    ),
-                                  ),
-                                );
-                              }),
+                return ContinentCard(
+                  cont: continents[index],
+                  onTap: () {
+                    if (continents[index].suroo != null) {
+                      Navigator.push<void>(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (BuildContext context) =>
+                              TestPage(suroo: continents[index].suroo!),
                         ),
-                      ),
-                    ),
-                  ],
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content:
+                              Text('Kechiresing bul continenttin suroosu jok'),
+                        ),
+                      );
+                    }
+                  },
                 );
               },
             ),

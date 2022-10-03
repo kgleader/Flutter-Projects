@@ -43,7 +43,7 @@ class _TestPageState extends State<TestPage> {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Image.asset(
-                  'assets/images/capitals/${widget.suroo[index].image}.jpeg'),
+                  'assets/images/capitals/${widget.suroo[index].image}.jpg'),
             ),
           ),
           Variants(

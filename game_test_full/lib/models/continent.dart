@@ -29,10 +29,11 @@ const europe = Continent(
   color: Color(0xff81A2FD),
 );
 
-const nAmerica = Continent(
+final nAmerica = Continent(
   name: AppText.northAmerica,
   icon: 'north_america',
-  color: Color(0xffFEB000),
+  color: const Color(0xffFEB000),
+  suroo: nAmericaQues,
 );
 
 const sAmerica = Continent(
@@ -45,7 +46,7 @@ final africa = Continent(
   name: AppText.africa,
   icon: 'africa',
   color: const Color(0xffFEEF34),
-  suroo: africaQuessions,
+  suroo: africaQues,
 );
 
 const australia = Continent(
