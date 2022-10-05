@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:game_test_full/components/continent_card.dart';
 import 'package:game_test_full/constants/app_color.dart';
 import 'package:game_test_full/constants/app_text.dart';
@@ -12,9 +11,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.bgColor,
+      backgroundColor: const Color.fromARGB(255, 133, 222, 16),
       appBar: AppBar(
-        backgroundColor: AppColors.bgColor,
+        backgroundColor: const Color.fromARGB(255, 240, 240, 240),
         title: const Text(
           AppText.gameTitle,
           style: TextStyle(color: Colors.black),
@@ -67,8 +66,7 @@ class MyHomePage extends StatelessWidget {
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content:
-                              Text('Kechiresing bul continenttin suroosu jok'),
+                          content: Text('There is not yet test ready'),
                         ),
                       );
                     }

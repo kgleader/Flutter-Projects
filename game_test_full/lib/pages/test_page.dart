@@ -53,8 +53,8 @@ class _TestPageState extends State<TestPage> {
                 showDialog<String>(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
-                    title: const Text('Sizdin Test jiyintygynyz!'),
-                    content: Text('tuure: $tuuraJooptor\nkata $kataJooptor'),
+                    title: const Text('Your results!'),
+                    content: Text('Correct: $tuuraJooptor\nWrong $kataJooptor'),
                     actions: <Widget>[
                       TextButton(
                         onPressed: () {

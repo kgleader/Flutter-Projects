@@ -23,10 +23,11 @@ final asia = Continent(
   suroo: asiaQuessions,
 );
 
-const europe = Continent(
+final europe = Continent(
   name: AppText.europe,
   icon: 'europe',
-  color: Color(0xff81A2FD),
+  color: const Color(0xff81A2FD),
+  suroo: europeQues,
 );
 
 final nAmerica = Continent(
@@ -36,10 +37,11 @@ final nAmerica = Continent(
   suroo: nAmericaQues,
 );
 
-const sAmerica = Continent(
+final sAmerica = Continent(
   name: AppText.southAmerica,
   icon: 'south_america',
   color: Color(0xffE5A9E4),
+  suroo: sAmericaQues,
 );
 
 final africa = Continent(
@@ -49,10 +51,11 @@ final africa = Continent(
   suroo: africaQues,
 );
 
-const australia = Continent(
+final australia = Continent(
   name: AppText.australia,
   icon: 'australia',
-  color: Color(0xff6BF782),
+  color: const Color(0xff6BF782),
+  suroo: australiaQues,
 );
 
 List<Continent> continents = [

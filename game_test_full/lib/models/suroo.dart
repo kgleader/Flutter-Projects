@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class Suroo {
   const Suroo({
     required this.text,
@@ -24,6 +26,33 @@ List<Suroo> asiaQuessions = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10];
 List<Suroo> nAmericaQues = [s11, s12, s13, s14, s15, s16, s17, s18, s19, s20];
 
 List<Suroo> africaQues = [s21, s22, s23, s24, s25, s26, s27, s28];
+
+List<Suroo> europeQues = [
+  s30,
+  s31,
+  s32,
+  s33,
+  s34,
+  s35,
+  s36,
+  s37,
+  s38,
+  s39,
+  s40
+];
+
+List<Suroo> australiaQues = [
+  s41,
+  s42,
+  s43,
+  s44,
+  s45,
+  s46,
+  s47,
+  s48,
+];
+
+List<Suroo> sAmericaQues = [s50, s51, s52, s53, s54, s55, s56, s57, s58];
 
 const s1 = Suroo(
   text: 'Ashhabad',
@@ -331,4 +360,323 @@ const s28 = Suroo(
     Joop(text: 'Argentina'),
   ],
   image: 'victoriaSey',
+);
+
+const s30 = Suroo(
+  text: 'Amsterdam',
+  jooptor: [
+    Joop(text: 'Germany'),
+    Joop(text: 'Belgium'),
+    Joop(text: 'Iceland'),
+    Joop(text: 'Netherlands', isTrue: true),
+  ],
+  image: 'amsterdam',
+);
+
+const s31 = Suroo(
+  text: 'Berlin',
+  jooptor: [
+    Joop(text: 'Russia'),
+    Joop(text: 'Belgium'),
+    Joop(text: 'Germany', isTrue: true),
+    Joop(text: 'Iceland')
+  ],
+  image: 'berlin',
+);
+
+const s32 = Suroo(
+  text: 'Brussels',
+  jooptor: [
+    Joop(text: 'Estonia'),
+    Joop(text: 'England'),
+    Joop(text: 'Belgium', isTrue: true),
+    Joop(text: 'Iceland'),
+  ],
+  image: 'brussel',
+);
+
+const s33 = Suroo(
+  text: 'Copenhagen',
+  jooptor: [
+    Joop(text: 'Denmark', isTrue: true),
+    Joop(text: 'France'),
+    Joop(text: 'Belarus'),
+    Joop(text: 'Gibraltar'),
+  ],
+  image: 'copenhagen',
+);
+
+const s34 = Suroo(
+  text: 'Helsinki',
+  jooptor: [
+    Joop(text: 'Estonia'),
+    Joop(text: 'Czech Republic'),
+    Joop(text: 'Gibraltar'),
+    Joop(text: 'Finland', isTrue: true),
+  ],
+  image: 'helsinki',
+);
+
+const s35 = Suroo(
+  text: 'Oslo',
+  jooptor: [
+    Joop(text: 'Norway', isTrue: true),
+    Joop(text: 'Switzerland'),
+    Joop(text: 'Hungary'),
+    Joop(text: 'Vatican City'),
+  ],
+  image: 'oslo',
+);
+
+const s36 = Suroo(
+  text: 'Prague',
+  jooptor: [
+    Joop(text: 'United Kingdom'),
+    Joop(text: 'Spain'),
+    Joop(text: 'Portugal'),
+    Joop(text: 'Czech Republic', isTrue: true),
+  ],
+  image: 'prague',
+);
+
+const s37 = Suroo(
+  text: 'Reykjavik',
+  jooptor: [
+    Joop(text: 'Croatia'),
+    Joop(text: 'Albania'),
+    Joop(text: 'Portugal'),
+    Joop(text: 'Iceland', isTrue: true),
+  ],
+  image: 'reykjavik',
+);
+
+const s38 = Suroo(
+  text: 'Sofia',
+  jooptor: [
+    Joop(text: 'Bulgaria', isTrue: true),
+    Joop(text: 'Faroe Islands'),
+    Joop(text: 'Guernsey'),
+    Joop(text: 'Croatia'),
+  ],
+  image: 'sofiya',
+);
+
+const s39 = Suroo(
+  text: 'Tallin',
+  jooptor: [
+    Joop(text: 'Slovakia'),
+    Joop(text: 'Poland'),
+    Joop(text: 'Estonia', isTrue: true),
+    Joop(text: 'Croatia'),
+  ],
+  image: 'tallinn',
+);
+
+const s40 = Suroo(
+  text: 'Vienna',
+  jooptor: [
+    Joop(text: 'Lithuania'),
+    Joop(text: 'Poland'),
+    Joop(text: 'Jersey'),
+    Joop(text: 'Austria', isTrue: true),
+  ],
+  image: 'viena',
+);
+
+const s41 = Suroo(
+  text: 'Funafuti',
+  jooptor: [
+    Joop(text: 'Morocco'),
+    Joop(text: 'Poland'),
+    Joop(text: 'India'),
+    Joop(text: 'Tuvalu', isTrue: true),
+  ],
+  image: 'Funafuti',
+);
+
+const s42 = Suroo(
+  text: 'Honiara',
+  jooptor: [
+    Joop(text: 'Iceland'),
+    Joop(text: 'Honiara', isTrue: true),
+    Joop(text: 'India'),
+    Joop(text: 'Argentina'),
+  ],
+  image: 'Honiara',
+);
+
+const s43 = Suroo(
+  text: 'Ngerulmud',
+  jooptor: [
+    Joop(text: 'Iceland'),
+    Joop(text: 'Palau', isTrue: true),
+    Joop(text: 'Micronesia'),
+    Joop(text: 'Argentina'),
+  ],
+  image: 'Ngerulmud',
+);
+
+const s44 = Suroo(
+  text: 'Palikir',
+  jooptor: [
+    Joop(text: 'Iceland'),
+    Joop(text: 'Micronesia', isTrue: true),
+    Joop(text: 'Tonga'),
+    Joop(text: 'Argentina'),
+  ],
+  image: 'Palikir',
+);
+
+const s45 = Suroo(
+  text: 'Suva',
+  jooptor: [
+    Joop(text: 'Iceland'),
+    Joop(text: 'Australia'),
+    Joop(text: 'Tonga'),
+    Joop(text: 'Fiji', isTrue: true),
+  ],
+  image: 'suva',
+);
+
+const s46 = Suroo(
+  text: 'Tarawa',
+  jooptor: [
+    Joop(text: 'Iceland'),
+    Joop(text: 'Australia'),
+    Joop(text: 'Tonga'),
+    Joop(text: 'Kiribati', isTrue: true),
+  ],
+  image: 'Tarawa',
+);
+
+const s47 = Suroo(
+  text: 'Wellington',
+  jooptor: [
+    Joop(text: 'New Zealand', isTrue: true),
+    Joop(text: 'Australia'),
+    Joop(text: 'Tonga'),
+    Joop(text: 'Iceland'),
+  ],
+  image: 'Wellington',
+);
+
+const s48 = Suroo(
+  text: 'Canberra',
+  jooptor: [
+    Joop(text: 'Australia', isTrue: true),
+    Joop(text: 'Papua New Guinea'),
+    Joop(text: 'Tonga'),
+    Joop(text: 'Marshall Islands'),
+  ],
+  image: 'Canberra',
+);
+
+const s50 = Suroo(
+  text: 'Asunción',
+  jooptor: [
+    Joop(text: 'Paraguay', isTrue: true),
+    Joop(text: 'Canada'),
+    Joop(text: 'Argentina'),
+    Joop(text: 'Bolivia'),
+  ],
+  image: 'Asunción',
+);
+
+const s51 = Suroo(
+  text: 'Brasilia',
+  jooptor: [
+    Joop(text: 'Bolivia'),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Argentina'),
+    Joop(text: 'Brazil', isTrue: true),
+  ],
+  image: 'Brasilia',
+);
+
+const s52 = Suroo(
+  text: 'Buenos Aires',
+  jooptor: [
+    Joop(text: 'Guyana'),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Argentina', isTrue: true),
+  ],
+  image: 'Buenos Aires',
+);
+
+const s53 = Suroo(
+  text: 'Caracas',
+  jooptor: [
+    Joop(text: 'Peru'),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Venezuela', isTrue: true),
+  ],
+  image: 'Caracas',
+);
+
+const s54 = Suroo(
+  text: 'Georgetown',
+  jooptor: [
+    Joop(text: 'Argentina'),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Guyana', isTrue: true),
+  ],
+  image: 'Georgetown',
+);
+
+const s55 = Suroo(
+  text: 'La Paz Sucre',
+  jooptor: [
+    Joop(text: 'Ecuador'),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Bolivia', isTrue: true),
+  ],
+  image: 'La Paz Sucre',
+);
+
+const s56 = Suroo(
+  text: 'Lima',
+  jooptor: [
+    Joop(text: 'Peru', isTrue: true),
+    Joop(text: 'Colombia'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Ecuador'),
+  ],
+  image: 'Lima',
+);
+
+const s57 = Suroo(
+  text: 'Quito',
+  jooptor: [
+    Joop(text: 'Ecuador', isTrue: true),
+    Joop(text: 'France'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Uruguay'),
+  ],
+  image: 'Quito',
+);
+
+const s58 = Suroo(
+  text: 'Santiago',
+  jooptor: [
+    Joop(text: 'Chile', isTrue: true),
+    Joop(text: 'France'),
+    Joop(text: 'Venezuela'),
+    Joop(text: 'Uruguay'),
+  ],
+  image: 'Santiago',
+);
+
+const s59 = Suroo(
+  text: 'Montevideo',
+  jooptor: [
+    Joop(text: 'Ecuador'),
+    Joop(text: 'Chile'),
+    Joop(text: 'Argentina'),
+    Joop(text: 'Uruguay', isTrue: true),
+  ],
+  image: 'Montevideo',
 );

@@ -29,7 +29,7 @@ flutter:
 
   # example:
   # fonts:
-  #   - family: Schyler
+  #   - family: Schyler,
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
