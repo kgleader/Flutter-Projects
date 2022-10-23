@@ -13,6 +13,8 @@
     <data android:scheme="tel" />
   </intent>
 </queries>
+<! -- Интернет -->
+  <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="nash_project"
         android:name="${applicationName}"

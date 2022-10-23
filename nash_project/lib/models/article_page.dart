@@ -1,5 +1,7 @@
+import 'package:nash_project/models/source.dart';
+
 class Article {
-  final Object source;
+  final Source? source;
   final String? author;
   final String tilte;
   final String description;
@@ -16,13 +18,17 @@ class Article {
       this.url,
       this.urlToImage,
       required this.publishedAt,
-      this.content});
+      required this.content});
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
-        source: json['source'],
+        source: Source.fromJson(json['source']),
         tilte: json['title'],
         description: json['description'],
-        publishedAt: json['publishedAt']);
+        publishedAt: json['publishedAt'],
+        content: json['content'],
+        author: json['author'],
+        url: json['url'],
+        urlToImage: json['urlImage']);
   }
 }

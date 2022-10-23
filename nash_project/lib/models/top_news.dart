@@ -14,6 +14,7 @@ class TopNews {
     return TopNews(
         status: json['status'],
         totalResults: json['totalResults'],
-        articles: json['articles']);
+        articles: List<Article>.from(
+            {json['articles']}.map((x) => Article.fromJson(x))));
   }
 }
