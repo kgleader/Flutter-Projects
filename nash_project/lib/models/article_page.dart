@@ -22,13 +22,14 @@ class Article {
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
-        source: Source.fromJson(json['source']),
-        tilte: json['title'],
-        description: json['description'],
-        publishedAt: json['publishedAt'],
-        content: json['content'],
-        author: json['author'],
-        url: json['url'],
-        urlToImage: json['urlImage']);
+      source: Source.fromJson(json['source']),
+      tilte: json['title'],
+      description: json['description'],
+      publishedAt: json['publishedAt'],
+      content: json['content'],
+      author: json['author'],
+      url: json['url'],
+      urlToImage: json['urlImage'],
+    );
   }
 }

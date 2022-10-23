@@ -45,8 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       children: [
                         Expanded(
+                            flex: 3,
                             child: Image.network(
                                 news.urlToImage ?? ApiConstant.forUknownImage)),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(child: Text(news.tilte))
                       ],
                     ),
                   );
