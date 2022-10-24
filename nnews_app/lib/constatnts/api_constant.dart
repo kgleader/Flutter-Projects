@@ -3,8 +3,8 @@ class ApiConstant {
   static const String myPoint =
       'https://newsapi.org/v2/everything?q=bitcoin&apiKey=$myKey';
   static const String topNews =
-      'http://newsapi.org/v2/everything?country=us&apiKey=$myKey';
+      'https://newsapi.org/v2/top-headlines?country=us&apiKey=$myKey';
 
   static const String forUnknownImage =
-      'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_01/2705191/nbc-social-default.png';
+      'https://media4.s-nbcnews.com/j/newscms/2019_01/2705191/nbc-social-default_b6fa4fef0d31ca7e8bc7ff6d117ca9f4.nbcnews-fp-1200-630.png';
 }

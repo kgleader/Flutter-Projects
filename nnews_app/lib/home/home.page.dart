@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         const SizedBox(
                           width: 10,
                         ),
-                        Expanded(child: Text(news.tilte))
+                        Expanded(flex: 5, child: Text(news.title))
                       ],
                     ),
                   );
