@@ -40,7 +40,7 @@ final nAmerica = Continent(
 final sAmerica = Continent(
   name: AppText.southAmerica,
   icon: 'south_america',
-  color: Color(0xffE5A9E4),
+  color: const Color(0xffE5A9E4),
   suroo: sAmericaQues,
 );
 

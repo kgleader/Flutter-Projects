@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class Suroo {
   const Suroo({
     required this.text,
@@ -568,7 +566,7 @@ const s48 = Suroo(
     Joop(text: 'Tonga'),
     Joop(text: 'Marshall Islands'),
   ],
-  image: 'Canberra',
+  image: 'canberra',
 );
 
 const s50 = Suroo(

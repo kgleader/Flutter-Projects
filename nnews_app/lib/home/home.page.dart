@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'News',
+            'НОВОСТИ',
             style: TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
           ),
