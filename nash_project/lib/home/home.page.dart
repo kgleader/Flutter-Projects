@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:nash_project/constatnts/api_constant.dart';
-import 'package:nash_project/models/top_news.dart';
-import 'package:nash_project/service/fetch.dart';
+import 'package:nash_project/components/news_card.dart';
+import 'package:nash_project/constants/api_constants.dart';
+import 'package:nash_project/model/article.dart';
+import 'package:nash_project/model/top_news.dart';
+import 'package:nash_project/services/fetch_service.dart';
+import 'package:nash_project/theme/colors.dart';
+import 'package:nash_project/theme/text_style.dart';
+
+import '../models/top_news.dart';
+import '../service/fetch_services.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,8 +20,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TopNews? topNews;
 
+//home_viewda bir metod bolsul al fetchNews metodu bolsun. Bul asinhronniy bolsun anan Future<void> bolsun.
   Future<void> fetchNews() async {
-    topNews = await TopNewsRepo().fetchData();
+    // TopNews nulalibl kaytarat! topNewska TopNewsRepo().fetchTopNews(); барабарланды.
+    topNews = await TopNewsRepo().fetchTopNews();
+    // Барабарлагандан кийин setState кылып коёбуз.
     setState(() {});
   }
 
@@ -27,34 +37,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            'News',
-            style: TextStyle(
-                color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ),
-        body: topNews == null
-            ? const Center(child: CircularProgressIndicator())
-            : ListView.builder(
-                itemCount: topNews!.articles.length,
-                itemBuilder: ((contex, index) {
-                  final news = topNews!.articles[index];
-                  return Card(
-                    child: Row(
-                      children: [
-                        Expanded(
-                            flex: 3,
-                            child: Image.network(
-                                news.urlToImage ?? ApiConstant.forUknownImage)),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Expanded(child: Text(news.tilte))
-                      ],
-                    ),
-                  );
-                })));
+      appBar: AppBar(
+          backgroundColor: AppColor.primary,
+          title: const Text(AppText.topNewsAppBarTitle)),
+      // topNews nullga true bolso anda zagruzkany korsotup tura ber.
+
+      body: topNews == null
+          ? const Center(child: CircularProgressIndicator())
+          // Эгер андай болбосо =>
+          : ListView.builder(
+              itemCount: topNews!.articles.length,
+              itemBuilder: ((contex, index) {
+                final news = topNews!.articles[index];
+                return NewsCard(news: news);
+              }),
+            ),
+    );
   }
 }
