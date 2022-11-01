@@ -54,7 +54,7 @@ class NewsDetailPage extends StatelessWidget {
                 Image.asset('assets/Errors-01.png'),
             fit: BoxFit.fitWidth,
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(
@@ -62,7 +62,7 @@ class NewsDetailPage extends StatelessWidget {
             style: AppTextStyle.detailDescription,
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           article.url != null
