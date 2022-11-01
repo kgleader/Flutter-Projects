@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:nash_project/constatnts/api_constant.dart';
+import 'package:nash_project/constatants/api_constant.dart';
 import '../models/top_news.dart';
 
 //TopNews алып келе турган бир сервис жазайбыз анын аталышын репозиторий деп атап койушат.

@@ -6,7 +6,7 @@ class AppText {
 }
 
 class AppTextStyle {
-  static const TextStyle newsdetailTitle =
+  static const TextStyle newsDetailTitle =
       TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700);
 
   static const TextStyle dateTime =

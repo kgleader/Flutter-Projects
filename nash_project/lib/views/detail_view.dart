@@ -4,6 +4,11 @@ import 'package:share_plus/share_plus.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
+import '../components/detail_date_time.dart';
+import '../components/detail_divider.dart';
+import '../components/news_detail_title.dart';
+import '../components/read_more_button.dart';
+import '../constatants/api_constant.dart';
 import '../models/article_page.dart';
 import '../themes/colors.dart';
 import '../themes/text_style.dart';

@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nash_project/components/news_card.dart';
-import 'package:nash_project/constants/api_constants.dart';
-import 'package:nash_project/model/article.dart';
-import 'package:nash_project/model/top_news.dart';
-import 'package:nash_project/services/fetch_service.dart';
-import 'package:nash_project/theme/colors.dart';
-import 'package:nash_project/theme/text_style.dart';
-
 import '../models/top_news.dart';
 import '../service/fetch_services.dart';
 import '../themes/colors.dart';
