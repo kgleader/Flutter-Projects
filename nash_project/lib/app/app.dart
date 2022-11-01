@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nash_project/home/home.page.dart';
+
+import '../views/home_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const MyHomeView(),
     );
   }
 }

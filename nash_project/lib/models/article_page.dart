@@ -4,7 +4,7 @@ class Article {
   const Article(
       {this.source,
       this.author,
-      required this.tilte,
+      required this.title,
       required this.description,
       this.url,
       this.urlToImage,
@@ -13,7 +13,7 @@ class Article {
 
   final Source? source;
   final String? author;
-  final String tilte;
+  final String title;
   final String? description;
   final String? url;
   final String? urlToImage;
@@ -28,7 +28,7 @@ class Article {
     // Source kaytarabuz dagy anyn ichindegi id ge jsondun 'id' sin baylaybyz, nameine jsondun 'name'in baylaybuz.
     return Article(
       source: Source.fromJson(json['source']),
-      tilte: json['title'],
+      title: json['title'],
       description: json['description'],
       publishedAt: json['publishedAt'],
       content: json['content'],
